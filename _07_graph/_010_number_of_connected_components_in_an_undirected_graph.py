@@ -39,7 +39,6 @@ class Solution:
 
 
         def dfs(source):
-            #test
             visited[source] = 1
             for neighbor in adjList[source]:
                 if visited[neighbor] == -1:
