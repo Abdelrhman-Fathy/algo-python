@@ -10,8 +10,10 @@
 #import selection_sort
 #selection_sort.test()
 
-#import insertion_sort
-#insertion_sort.test()
+##import _02_sorting_algorithms.insertion_sort as ref
+
+#import _02_sorting_algorithms._02_bubble_sort as ref
+#import _02_sorting_algorithms._04_merge_sort as ref
 
 #import merge_sort
 #merge_sort.test()
@@ -34,8 +36,7 @@
 #import two_sum_sorting
 #two_sum_sorting.test()
 
-#import test
-#test.test()
+
 
 
 #import three_sum_sorting
@@ -86,7 +87,8 @@
 
 #import _04_line_sweep.merge_intervals as ref
 
-#import _04_line_sweep.insert_interval as ref
+import _04_line_sweep._05_insert_interval as ref
+
 
 #import _04_line_sweep.interval_list_intersections as ref
 
@@ -103,7 +105,9 @@
 #import _05_recursion._10_combinations_2 as ref
 #import _05_recursion._11_n_queens_2 as ref
 #import _05_recursion._12_n_queens_3 as ref
-import _07_graph._010_number_of_connected_components_in_an_undirected_graph as ref
+#import _07_graph._010_number_of_connected_components_in_an_undirected_graph as ref
 
-
+#import test as ref
+#test.test()
 ref.test()
+

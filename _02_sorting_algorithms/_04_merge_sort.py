@@ -1,26 +1,32 @@
 def helper(a, start, end):
+    #base case
     if start == end:
         return
-    mid = start + (end-start) // 2
+
+    #divide
+    mid = start + (end-start)//2
     helper(a, start, mid)
-    helper(a, mid + 1, end)
+    helper(a, mid+1, end)
+
+    #Combine
     i = start
-    j = mid + 1
+    j = mid+1
     arr = []
     while i <= mid and j <= end:
-        if a[i] <= a[j]:
+        if a[i] < a[j]:
             arr.append(a[i])
             i += 1
         else:
             arr.append(a[j])
             j += 1
+
+    #add remaining
     if i <= mid:
-        arr +=a[i:mid+1]
+        arr += a[i:mid+1]
     if j <= end:
         arr += a[j:end+1]
-    a[start:end + 1] = arr
-    return
-
+    #copy to original array
+    a[start:end+1] = arr
 
 def merge_sort(a):
     helper(a, 0, len(a) - 1)

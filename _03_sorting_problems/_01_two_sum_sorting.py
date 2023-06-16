@@ -1,3 +1,6 @@
+#https://leetcode.com/problems/two-sum/
+#1. Two Sum
+
 import numpy as np
 
 def two_sum_sorting(a, target):

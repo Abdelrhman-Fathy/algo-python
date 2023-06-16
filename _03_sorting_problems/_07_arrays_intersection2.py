@@ -1,3 +1,4 @@
+#https://leetcode.com/problems/intersection-of-two-arrays/
 #leetcode 349 intersection of two arrays
 def arrays_intersection2(nums1,nums2):
     set1 = {}

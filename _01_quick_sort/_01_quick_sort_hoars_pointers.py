@@ -15,7 +15,8 @@ def helper(a, start, end):
             a[bigger],a[smaller] = a[smaller],a[bigger]
         a[bigger], a[start] = a[start], a[bigger]
         helper(a, start, bigger)
-        helper(a, smaller, end )
+        helper(a, smaller, end)
+
 
 def test():
     a = [200, 101, 53, 40, 20, 6, 4,1]

@@ -1,3 +1,6 @@
+#https://leetcode.com/problems/k-closest-points-to-origin/
+#973. K Closest Points to Origin
+
 import random
 
 # return when index = k-1

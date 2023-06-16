@@ -1,3 +1,6 @@
+#https://leetcode.com/problems/3sum/
+#15. 3Sum
+
 def three_sum_sorting(nums):
     nums.sort()
     result = []
