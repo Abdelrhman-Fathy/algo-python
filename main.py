@@ -10,7 +10,7 @@
 #import selection_sort
 #selection_sort.test()
 
-##import _02_sorting_algorithms.insertion_sort as ref
+#import _02_sorting_algorithms.insertion_sort as ref
 
 #import _02_sorting_algorithms._02_bubble_sort as ref
 #import _02_sorting_algorithms._04_merge_sort as ref
@@ -36,12 +36,8 @@
 #import two_sum_sorting
 #two_sum_sorting.test()
 
-
-
-
 #import three_sum_sorting
 #three_sum_sorting.test()
-
 
 #import two_sum_2
 #two_sum_2.test()
@@ -87,10 +83,10 @@
 
 #import _04_line_sweep.merge_intervals as ref
 
-import _04_line_sweep._05_insert_interval as ref
+#import _04_line_sweep._05_insert_interval as ref
 
 
-#import _04_line_sweep.interval_list_intersections as ref
+#import _04_line_sweep._07_interval_list_intersections as ref
 
 #import _04_line_sweep._06_employee_free_time as ref
 #import _05_recursion._01_letter_case_permutation as ref
@@ -106,6 +102,9 @@ import _04_line_sweep._05_insert_interval as ref
 #import _05_recursion._11_n_queens_2 as ref
 #import _05_recursion._12_n_queens_3 as ref
 #import _07_graph._010_number_of_connected_components_in_an_undirected_graph as ref
+#import _07_graph.eulerian_cycle_path as ref
+#import _09_arrays2._01_wiggle_sort as ref
+import _09_arrays2._06_maximal_square as ref
 
 #import test as ref
 #test.test()

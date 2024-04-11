@@ -1,28 +1,27 @@
 
-
-import heapq
-
-def instert(intervals, newInterval):
+def intervalIntersection(firstList, secondList):
+    #in this problem we will use 2 pointers technique
+    i = 0
+    j = 0
     result = []
-    bail_index = len(intervals)
-    for i in range(len(intervals)):
-        if intervals[i][1] < newInterval[0]: #no overlap
-            result.append(intervals[i])
+
+    while i < len(firstList) and j < len(secondList):
+        #if first list meeting ends before second list meeting start increment, then there is no overlap, you need to increment i
+        if firstList[i][1] < secondList[j][0]:
+            i+=1
+        #If second list meeting ends before first list meeting start, then there is no overlap, increment j
+        elif secondList[j][1] < firstList[i][0]:
+            j += 1
+        #otherwise there is overlap from the max start and min end of both meeting.
         else:
-            bail_index = i
-            break
-    result.append(newInterval)
-    for i in range(bail_index, len(intervals)):
-        if result[-1][1] < intervals[i][0]: #no overlap
-            result.append(intervals[i])
-        else: #overlap
-            result[-1] = [min(result[-1][0], intervals[i][0]),
-                          max(result[-1][1], intervals[i][1])]
+            result.append([max(firstList[i][0], secondList[j][0]),
+                          min(firstList[i][1], secondList[i][1])])
+            #you need to move away from the smallest end, as the longer meeting can overlap with next meeting from the other list
+            if firstList[i][1] < secondList[j][1]:
+                i += 1
+            else:
+                j += 1
     return result
-
-
-
-
 
 def test():
     min_heap = [-1,-2,-3,-4,-5]
