@@ -1,6 +1,6 @@
 # Daily Algorithms Practice Repository
 
-Welcome to my daily algorithms practice repository! Here, I tackle various algorithmic problems to hone my skills.
+Welcome to my daily algorithms practice repository! Here, I tackle various algorithmic problems to hone my skills. All problems are solved using Python.
 
 ## Quick Sort
 
