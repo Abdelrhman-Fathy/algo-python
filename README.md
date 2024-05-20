@@ -78,6 +78,7 @@ Welcome to my daily algorithms practice repository! Here, I tackle various algor
 
 1. **Number of Connected Components in an Undirected Graph**: _01_number_of_connected_components_in_an_undirected_graph.py_
 2. **Eulerian Cycle Path**: _02_eulerian_cycle_path.py_
+3. **leetcode 261. Graph Valid Tree**: _04_graph_valid_tree
 
 ## Arrays (Best Time to Buy and Sell Stock)
 
