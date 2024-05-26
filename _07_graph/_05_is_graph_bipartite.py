@@ -21,7 +21,7 @@ class Solution:
         #BFS
 
         visited = [-1] * n
-        level = [-1] * n
+        level = [0] * n
         def bfs(src):
             q = collections.deque([src])
             visited[src] = 1
@@ -37,6 +37,8 @@ class Solution:
                         if level[neighbor] == level[node]:
                             return False
             return True
+
+        # DFS
         def dfs(node):
             visited[node] = 1
             for neighbor in graph[node]:
@@ -49,7 +51,7 @@ class Solution:
                         return False
             return True
 
-        #DFS
+
         #outer loop
         for v in range(len(graph)):
             if visited[v] == -1:
