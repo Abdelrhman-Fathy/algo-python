@@ -10,25 +10,6 @@ class Solution:
         for (prereq, course) in prerequisites:
             graph[course].append(prereq)
         visited = [-1] * numCourses
-        arrival = [-1] * numCourses
-        departure = [-1] * numCourses
-        self.time = 0
-        def dfs(node):
-            visited[node] = 1
-            arrival[node] = self.time
-            self.time += 1
-            for neighbor in graph[node]:
-                if visited[neighbor] == -1:
-                    if dfs(neighbor) == True:
-                        return True
-                else:
-                    if departure[neighbor] == -1: #cycle detected
-                        return True
-            departure[node] = self.time
-            self.time += 1
-            return
-
-
         #kahn algorithm
         def kahn():
             #calculate the in degree
@@ -43,7 +24,7 @@ class Solution:
                     deq.append(node)
                     visited[node] = 1
             while len(deq) != 0:
-                node = deq.popLeft()
+                node = deq.popleft()
                 for neighbor in graph[node]:
                     inDegree[neighbor] -= 1
                     if inDegree[neighbor] == 0 and visited[neighbor] == -1:
@@ -52,15 +33,11 @@ class Solution:
             for node in range(numCourses):
                 if visited[node] == -1:
                     return True
-
-
-
-        #outer loop
-        for node in range(numCourses):
-            if visited[node] == -1:
-                if dfs(node) == True:
-                    return False
-        return True
+            return False
+        if kahn() == True:
+            return False
+        else:
+            return True
 def test():
     sol = Solution()
 
